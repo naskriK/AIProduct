@@ -65,3 +65,129 @@
 body {
   font-family: var(--primary-ff);
 }
+
+.content {
+  min-height: 100vh;
+  background-color: var(--color-neutral);
+}
+
+.wrapper {
+  --width: 71.25rem;
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.wrapper--hero {
+  --width: 35rem;
+}
+
+.hero {
+  padding: 5rem 0 3rem 0;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero__title--top {
+  display: block;
+  font-weight: 200;
+  color: var(--color-heading);
+}
+
+.hero__title--bottom {
+  display: block;
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+.hero__description {
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.features {
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.feature {
+  padding: 2rem;
+  color: var(--color-neutral);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid;
+}
+
+.feature--supervisor {
+  grid-row: 1/-1;
+  align-self: center;
+  border-color: var(--color-supervisor);
+}
+
+.feature--builder {
+  border-color: var(--color-builder);
+}
+
+.feature--karma {
+  border-color: var(--color-karma);
+}
+
+.feature--calculator {
+  grid-row: 1/-1;
+  grid-column: 3;
+  align-self: center;
+  border-color: var(--color-calculator);
+}
+
+.feature__title {
+  color: var(--color-heading);
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.feature__description {
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 2.5rem;
+}
+
+.feature__icon {
+  align-self: flex-end;
+}
+
+@media (max-width: 52rem) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature--supervisor {
+    grid-row: auto;
+    align-self: auto;
+  }
+
+  .feature--calculator {
+    grid-column: auto;
+    align-self: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 32rem) {
+  .hero__title {
+    font-size: 1.75rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
